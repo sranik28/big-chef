@@ -3,12 +3,14 @@ import Root from "../layouts/Root";
 import Home from "../pages/Home";
 import Blog from "../pages/Blog";
 import Error from "../components/Error";
+import Register from "../pages/loginsite/Register";
+import Login from "../pages/loginsite/Login";
 
 const Router = createBrowserRouter([
     {
         path: '/',
         element: <Root />,
-        errorElement:<Error/>,
+        errorElement: <Error />,
         children: [
             {
                 path: '/',
@@ -18,6 +20,15 @@ const Router = createBrowserRouter([
                 path: '/blog',
                 element: <Blog />
             },
+            {
+                path: '/login',
+                element: <Login />
+            },
+            {
+                path: '/register',
+                element: <Register />
+            },
+
         ]
     }
 ]);

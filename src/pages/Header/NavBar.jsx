@@ -26,7 +26,7 @@ const NavBar = () => {
                     <li>
                         <NavLink to="/blog" className={({ isActive }) => isActive ? "active" : ""}>Blog</NavLink>
                     </li>
-                    <li><button className="bg-yellow-500 px-4 py-2 rounded text-white"><Link>Login</Link></button></li>
+                    <li><button className="bg-yellow-500 px-4 py-2 rounded text-white"><Link to="/login">Login</Link></button></li>
                 </ul>
             </div>
 
