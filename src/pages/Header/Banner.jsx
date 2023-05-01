@@ -1,5 +1,5 @@
 import React from 'react';
-import banner from '../../assets/main-banner-bg.jpg';
+import banner from '../../assets/banner.jpg';
 const Banner = () => {
     return (
         <main className='w-full h-[89vh] relative overflow-x-hidden' >
