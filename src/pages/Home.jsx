@@ -4,7 +4,7 @@ import NavBar from './Header/NavBar';
 const Home = () => {
     return (
         <main>
-            <div className='max-w-[1240px] mx-auto'>
+            <div className='container '>
                 <NavBar />
             </div>
         </main>
