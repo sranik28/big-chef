@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../Header/NavBar';
 import { useDataGlobally } from '../../context/Context';
@@ -9,6 +9,8 @@ import { BsGithub } from "react-icons/bs";
 const Login = () => {
 
     const { signIn, signInGoogle, signInGitHub } = useDataGlobally();
+
+    const [error, setError] = useState("");
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -22,6 +24,7 @@ const Login = () => {
             })
             .catch(error => {
                 console.log(error)
+                setError(error.message)
             })
 
     }
@@ -40,6 +43,8 @@ const Login = () => {
 
                         <p className='text-yellow-700 underline mt-5'><Link>Forget Password</Link></p>
                         <button className='w-[80%] bg-yellow-600 mx-auto rounded py-2 my-5 text-white font-semibold'>Login</button>
+
+                        <p className='text-red-600 text-lg'>{error}</p>
 
                         <p className='my-5'> Create a new account?<Link to="/register" className='text-yellow-700 underline'> Registration</Link></p>
                     </form>
