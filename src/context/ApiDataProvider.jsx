@@ -13,12 +13,12 @@ const ApiDataProvider = ({children}) => {
         getChefs()
     },[])
 
-    const apiDatas = {
+    const allData = {
         chefs,
 
     }
     return (
-        <ApiContext.Provider value={apiDatas}>
+        <ApiContext.Provider value={allData}>
             {children}
         </ApiContext.Provider>
     )
