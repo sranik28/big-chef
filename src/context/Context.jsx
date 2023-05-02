@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import app from "../firebase/fireBase.config";
 
 const ContextCreate = createContext();
@@ -37,6 +37,11 @@ const DataProvider = ({ children }) => {
             .catch(() => { })
     }
 
+    const logOut = () => {
+        setLoading(true)
+        return signOut(auth)
+    }
+
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser)
@@ -53,7 +58,8 @@ const DataProvider = ({ children }) => {
         signInGoogle,
         signInGitHub,
         loading,
-        user
+        user,
+        logOut
     }
 
     return <ContextCreate.Provider value={allData}>

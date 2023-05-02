@@ -36,7 +36,7 @@ const Login = () => {
                 <div className=' text-center py-5 bg-slate-200 rounded md:w-[500px]  mx-auto my-5'>
                     <form onSubmit={handleLogin}>
                         <input className='w-[80%] py-2 my-5 rounded' type="email" name="email" placeholder='      enter your email' required /><br />
-                        <input className='w-[80%] py-2 rounded ' type="password" name='password' placeholder='    enter your password' /><br />
+                        <input className='w-[80%] py-2 rounded ' type="password" name='password' placeholder='    enter your password' required /><br />
 
                         <p className='text-yellow-700 underline mt-5'><Link>Forget Password</Link></p>
                         <button className='w-[80%] bg-yellow-600 mx-auto rounded py-2 my-5 text-white font-semibold'>Login</button>

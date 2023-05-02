@@ -3,8 +3,11 @@ import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/logo.jpg';
 import { FiMenu } from 'react-icons/fi';
 import { MdOutlineRestaurantMenu } from 'react-icons/md';
+import { useDataGlobally } from '../../context/Context';
 
 const NavBar = () => {
+
+    const {logOut ,user }=useDataGlobally();
 
     const [toggle, setToggle] = useState(false)
     return (
@@ -26,7 +29,10 @@ const NavBar = () => {
                     <li>
                         <NavLink to="/blog" className={({ isActive }) => isActive ? "active" : ""}>Blog</NavLink>
                     </li>
-                    <li><button className="bg-yellow-500 px-4 py-2 rounded text-white"><Link to="/login">Login</Link></button></li>
+                    <li>{
+                            user ? <button onClick={logOut} className=" px-4 bg-yellow-500 py-2 rounded text-white">LogOut</button> : <button className="bg-yellow-500 px-4 py-2 rounded text-white"><Link to="/login">Login</Link></button>
+                        }
+                    </li>
                 </ul>
             </div>
 
