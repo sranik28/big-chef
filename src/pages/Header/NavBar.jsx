@@ -34,7 +34,7 @@ const NavBar = () => {
                         }
                     </li>
                     <li>{
-                            user ? <button onClick={logOut} className="bg-yellow-500 px-4 py-2  text-white">LogOut</button> : <button className="bg-yellow-500 px-4 py-2 rounded text-white"><Link to="/login">Login</Link></button>
+                            user ? <button onClick={logOut} className="bg-yellow-500 px-4 py-2  text-white">LogOut</button> : <button className="bg-yellow-500 px-4 py-2 rounded-md text-white"><Link to="/login">Login</Link></button>
                         }
                     </li>
                 </ul>

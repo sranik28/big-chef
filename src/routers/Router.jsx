@@ -5,6 +5,7 @@ import Blog from "../pages/Blog";
 import Error from "../components/Error";
 import Register from "../pages/loginsite/Register";
 import Login from "../pages/loginsite/Login";
+import ViewDetails from "../components/ViewDetails";
 
 const Router = createBrowserRouter([
     {
@@ -27,6 +28,10 @@ const Router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register />
+            },
+            {
+                path: '/view-details',
+                element: <ViewDetails/>
             },
 
         ]
