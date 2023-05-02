@@ -12,7 +12,7 @@ const Footer = () => {
                     <p>Email : bigchef@gmail.com</p>
                 </div>
                 <div className='text-center'>
-                    <h2 className='text-xl my-8'>Feans</h2>
+                    <h2 className='text-xl my-8'>Big Chef</h2>
                     <p>Necessary, making this the first true generator on <br /> the Internet. It uses a dictionary of over 200</p>
                     <div className=' flex gap-2 justify-center mt-3'>
                         <FaFacebookF />

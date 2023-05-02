@@ -30,7 +30,11 @@ const NavBar = () => {
                         <NavLink to="/blog" className={({ isActive }) => isActive ? "active" : ""}>Blog</NavLink>
                     </li>
                     <li>{
-                            user ? <button onClick={logOut} className=" px-4 bg-yellow-500 py-2 rounded text-white">LogOut</button> : <button className="bg-yellow-500 px-4 py-2 rounded text-white"><Link to="/login">Login</Link></button>
+                            user?.photoURL ? <img className="w-[35px] h-[35px] rounded-full" src={user?.photoURL} title={user.displayName} alt="" /> : ""
+                        }
+                    </li>
+                    <li>{
+                            user ? <button onClick={logOut} className="bg-yellow-500 px-4 py-2  text-white">LogOut</button> : <button className="bg-yellow-500 px-4 py-2 rounded text-white"><Link to="/login">Login</Link></button>
                         }
                     </li>
                 </ul>

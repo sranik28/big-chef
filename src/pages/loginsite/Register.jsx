@@ -8,7 +8,7 @@ const Register = () => {
     const { createUser } = useDataGlobally();
 
     const [error, setError] = useState("");
-    const [success, setSuccess]=useState("");
+    const [success, setSuccess] = useState("");
 
     const handleRegister = (e) => {
         e.preventDefault();
@@ -21,14 +21,14 @@ const Register = () => {
         const password = e.target.password.value;
         const photo = e.target.photo.value;
         console.log(name, email, password, photo);
-
-        if(!/(?=.*?[A-Z])/.test(password)){
+        // -------------
+        if (!/(?=.*?[A-Z])/.test(password)) {
             setError("At last one uppercase ")
         }
-        else if(!/(?=.*?[#?!@$%^&*-])/.test(password)){
+        else if (!/(?=.*?[#?!@$%^&*-])/.test(password)) {
             setError("At last one Character ")
         }
-        else if(password.length<6){
+        else if (password.length < 6) {
             setError("please add at least 6 number");
             return
         }
@@ -61,7 +61,7 @@ const Register = () => {
 
                     <p className='text-red-600 text-lg'>{error}</p>
                     <p className='text-green-600 text-lg'>{success}</p>
-
+                
                     <button className='w-[80%] bg-yellow-600 mx-auto rounded py-2 my-3 text-white font-semibold' >Register</button>
                     <div>
                         Already have a account?
