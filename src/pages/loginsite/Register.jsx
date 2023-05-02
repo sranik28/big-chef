@@ -50,7 +50,6 @@ const Register = () => {
 
     return (
         <main>
-            <NavBar />
             <div className='max-w-[1240px] mx-auto mt-20 bg-slate-200'>
                 <h1 className='text-center text-5xl font-bold'>Please <span className='text-yellow-600'>Registration</span></h1>
                 <form onSubmit={handleRegister} className='text-center py-5 bg-slate-200 rounded md:w-[500px]  mx-auto my-5'>

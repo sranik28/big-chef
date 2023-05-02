@@ -38,7 +38,6 @@ const Login = () => {
 
     return (
         <main>
-            <NavBar />
             <div className='max-w-[1240px] mx-auto  '>
                 <h1 className='text-center text-5xl font-bold'>Please <span className='text-yellow-600'>Login</span></h1>
                 <div className=' text-center py-5 bg-slate-200 rounded md:w-[500px]  mx-auto my-5'>

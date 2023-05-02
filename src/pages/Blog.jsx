@@ -5,8 +5,7 @@ import { ImFolderDownload } from 'react-icons/im';
 
 const Blog = () => {
     return (
-        <main className=''>
-            <NavBar />
+        <main>
             <div className='container'>
                 <h1 className='text-3xl font-bold text-center my-5'>Question's <span className='text-yellow-500'>Answer....</span></h1>
                 <div className='grid md:grid-cols-2 gap-4 mt-10 mb-20'>

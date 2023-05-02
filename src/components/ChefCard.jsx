@@ -14,7 +14,7 @@ const ChefCard = ({ chef }) => {
             </div>
             <div className=''>
                 <h1 className="text-4xl font-bold py-5">{name}</h1>
-                <p className="text-2xl my-2 text-gray-500">The Best Number Of Recipes : {number_of_recipes}</p>
+                <p className="text-2xl my-2 text-gray-500">The Best Recipes : {number_of_recipes}</p>
                 <p className="text-2xl my-2 text-gray-500"> Experience : {experience}</p>
                 <p className="text-2xl flex items-center gap-2 my-2 text-gray-500"><span className='text-yellow-600 '><BiLike /></span> {likes}</p>
                 <Link to="/view-details"><button className="bg-yellow-600 hover:bg-amber-500 w-full py-2 mt-10 rounded-md text-lg font-semibold text-white">View Details</button></Link>
