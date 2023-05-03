@@ -11,9 +11,12 @@ const ViewDetails = () => {
     return (
         <main>
             <SingleChef chef={data} />
-            {
-                data?.recipes && data.recipes.map((singleData, i) => <RecipesCard key={i} singleData={singleData} />)
-            }
+            <h1 className='text-center text-3xl font-bold mt-32'>Our Chef's All Recipe Items</h1>
+            <section className='grid md:grid-cols-3 container gap-6 my-10'>
+                {
+                    data?.recipes && data.recipes.map((singleData, i) => <RecipesCard key={i} singleData={singleData} />)
+                }
+            </section>
         </main>
     );
 };

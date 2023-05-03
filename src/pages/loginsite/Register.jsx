@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDataGlobally } from '../../context/Context';
 import { Link } from 'react-router-dom';
+import { updateProfile } from 'firebase/auth';
 
 const Register = () => {
 
@@ -19,7 +20,7 @@ const Register = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
         const photo = e.target.photo.value;
-        console.log(name, email, password, photo);
+        // console.log(name, email, password, photo);
         // -------------
         if (!/(?=.*?[A-Z])/.test(password)) {
             setError("At last one uppercase ")
@@ -37,6 +38,7 @@ const Register = () => {
             .then(result => {
                 const currentUser = result.user;
                 console.log(currentUser)
+                updateProfile(currentUser,{displayName:name,photoURL:photo})
                 e.target.reset();
                 setSuccess("User has created successfully");
             })

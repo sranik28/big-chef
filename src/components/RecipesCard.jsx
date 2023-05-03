@@ -1,27 +1,60 @@
-import React from 'react';
+import React, { useState } from 'react';
+import {  toast } from 'react-toastify';
 
-const RecipesCard = () => {
+const RecipesCard = ({ singleData }) => {
 
-    const { recipe_name, cooking_method, food_image, ratings, ingredient } = singleCard;
+    const { recipe_name, cooking_method, food_image, ratings, ingredient } = singleData;
+
+    const [fold, setFold] = useState(true)
+    const [isLiked, setIsLiked] = useState(false)
+
+    const handelFavoriteBtn = () => {
+        toast("Added in Favorite")
+        setIsLiked(true)
+    }
 
     return (
-        <div>
-            <main className="mt-16">
-                <div className="border w-[400px] h-[730px] rounded-md  p-4 shadow-lg">
-                    <img className="w-full h-72 block mx-auto rounded-md" src={food_image} alt="" />
-                    <p className="font-semibold my-3 text-3xl"> {recipe_name}</p>
-                    <p className="font-semibold">Food rating: <span className="font-semibold">{ratings}</span></p>
-                    <div>
-                        <ul >
-                            <li className="flex gap-3">
-                                {ingredient}
-                            </li>
-                        </ul>
+        <article className="p-4 rounded border w-full">
+            <img className="w-full h-[450px] rounded object-cover" src={food_image} alt="" />
+            <div className="text-center">
+                <h3 className=" text-xl font-bold my-3">{recipe_name}</h3>
+                <p className=" my-2"><span className="font-bold">ratings</span> : {ratings}</p>
+                <button onClick={handelFavoriteBtn} disabled={isLiked} className={` w-[150px] py-3 rounded text-white my-2 ${isLiked ? "bg-amber-500 cursor-not-allowed" : "bg-yellow-600"}`}>{isLiked ? "Favorited" : "Favorite"}</button>
+                <div className="border p-4 rounded">
+                    <span className="font-bold text-xl ">ingredient : </span>
+                    <div className="md:flex gap-3 flex-wrap">
+                        {
+                            singleData?.ingredient && singleData.ingredient.map((ingredient, index) => <span key={index}>{ingredient}</span>)
+                        }
                     </div>
-                    <p className="font-semibold">Cooking Method: <span className="text-justify text-zinc-500">{cooking_method}</span></p>
                 </div>
-            </main>
-        </div>
+
+                {fold ? (
+                    <>
+                        <p className=' text-gray-500'>{cooking_method.substring(0, 400)}.....</p>
+                        <span
+                            className='cursor-pointer text-blue-600 '
+                            onClick={() => setFold(!fold)}
+                        >
+                            Read More
+                        </span>
+                    </>
+                ) : (
+                    <>
+                        <p className=' text-gray-900'>{cooking_method}.....</p>
+                        <span
+                            className='cursor-pointer text-blue-600 '
+                            onClick={() => setFold(!fold)}
+                        >
+                            Read Less
+                        </span>
+                    </>
+                )}
+
+            </div>
+           
+        </article>
+
     );
 };
 
