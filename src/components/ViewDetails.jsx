@@ -1,13 +1,19 @@
 import React from 'react';
-import NavBar from '../pages/Header/NavBar';
+import { useLoaderData } from 'react-router-dom';
+import RecipesCard from './RecipesCard';
+import SingleChef from './SingleCafe';
 
 const ViewDetails = () => {
 
-
+    const data = useLoaderData()
+    console.log(data)
 
     return (
         <main>
-            <NavBar />
+            <SingleChef chef={data} />
+            {
+                data?.recipes && data.recipes.map((singleData, i) => <RecipesCard key={i} singleData={singleData} />)
+            }
         </main>
     );
 };

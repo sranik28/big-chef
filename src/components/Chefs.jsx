@@ -21,9 +21,11 @@ const Chefs = () => {
         <div className='container'>
             <h1 className='text-center text-4xl font-bold'>Our <span className='text-yellow-500'>Chefs</span></h1>
             <p className='text-gray-600 text-center mt-2'>The main chefs in our restaurant and supervisors of the chefs' crew</p>
-            {
-                slider.map(chef => <ChefCard key={chef._id} chef={chef} />)
-            }
+            <div className='grid md:grid-cols-2 gap-6 container'>
+                {
+                    slider.map(chef => <ChefCard key={chef._id} chef={chef} />)
+                }
+            </div>
             <button onClick={handelSeeMoreBtn} className={`bg-yellow-600 py-2 px-5 block mx-auto  rounded-md hover:hover:bg-amber-500 text-white font-semibold ${seeMore ? "" : "hidden"}`}>See More</button>
         </div>
     );

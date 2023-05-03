@@ -24,22 +24,22 @@ const FoodCategory = () => {
                     <p className="text-center ">price:<span className='font-bold'>$5</span> </p>
                 </div>
                 <div  className='border p-6 block mx-auto shadow-md '>
-                    <img className='w-72 h-72 rounded' src={FoodCategory3} alt="" srcset="" />
+                    <img className='w-72 h-72 rounded' src={FoodCategory3} alt=""  />
                     <h1 className='p-2 text-xl text-center'>Lamb Tagine</h1>
                     <p className="text-center ">Price:<span className='font-bold'>$20</span> </p>
                 </div>
                 <div className='border p-6 block mx-auto '>
-                    <img className='w-72 h-72' src={FoodCategory4} alt="" srcset="" />
+                    <img className='w-72 h-72' src={FoodCategory4} alt=""  />
                     <h1 className='p-2 text-xl text-center'>Beef burger</h1>
                     <p className="text-center ">Price:<span className='font-bold'>$21</span> </p>
                 </div>
                 <div className='border p-6 block mx-auto shadow-md '>
-                    <img className='w-72 h-72 rounded' src={FoodCategory5} alt="" srcset="" />
+                    <img className='w-72 h-72 rounded' src={FoodCategory5} alt=""  />
                     <h1 className='p-2 text-xl text-center'>Baingan Bharta</h1>
                     <p className="text-center">Price:<span className='font-bold'>$10</span> </p>
                 </div>
                 <div  className='border p-6 block mx-auto shadow-md '>
-                    <img className='w-72 h-72 rounded' src={FoodCategory6} alt="" srcset="" />
+                    <img className='w-72 h-72 rounded' src={FoodCategory6} alt=""  />
                     <h1 className='p-2 text-xl text-center'>Pizza</h1>
                     <p className="text-center ">Price:<span className='font-bold'>$22</span> </p>
                 </div>

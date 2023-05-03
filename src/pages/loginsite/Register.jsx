@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import NavBar from '../Header/NavBar';
 import { useDataGlobally } from '../../context/Context';
 import { Link } from 'react-router-dom';
 
@@ -66,7 +65,6 @@ const Register = () => {
                         Already have a account?
                         <Link to="/login" className="px-2 py-1 ml-2 text-yellow-600 underline rounded">Login</Link>
                     </div>
-
                 </form>
             </div>
         </main>

@@ -31,8 +31,9 @@ const Router = createBrowserRouter([
                 element: <Register />
             },
             {
-                path: '/view-details',
-                element: <PrivateRouter> <ViewDetails /></PrivateRouter>
+                path: '/view-details/:id',
+                element: <PrivateRouter> <ViewDetails /></PrivateRouter>,
+                loader: ({ params }) => fetch(`https://big-chef-data.vercel.app/${params.id}`)
             },
 
         ]
