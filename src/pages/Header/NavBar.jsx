@@ -12,7 +12,7 @@ const NavBar = () => {
     const [toggle, setToggle] = useState(false)
     return (
         <nav className="bg-white">
-            <div className="container flex justify-between items-center py-3">
+            <div className="container px-3 flex justify-between items-center py-3">
                 <div className='flex gap-2 items-center'>
                     <img className='w-12' src={logo} alt="" />
                     <Link to="/"><h2 className="text-2xl font-bold">big<span className="text-yellow-500">Chef</span></h2></Link>
