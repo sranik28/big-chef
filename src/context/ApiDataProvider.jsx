@@ -14,7 +14,7 @@ const ApiDataProvider = ({children}) => {
     },[])
 
     const allData = {
-        chefs,
+        chefs
 
     }
     return (

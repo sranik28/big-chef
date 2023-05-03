@@ -1,9 +1,22 @@
+import jsPDF from 'jspdf';
 import React from 'react';
-import NavBar from './Header/NavBar';
 import { GoFilePdf } from 'react-icons/go';
 import { ImFolderDownload } from 'react-icons/im';
 
 const Blog = () => {
+
+    const downloadPdf = () => {
+
+        const doc = new jsPDF("landscape", "px", "a4", "false")
+            doc.text("This blog page short summary", 20, 30)
+
+
+            doc.text("In software development, there are two types of components: uncontrolled and controlled. \n Uncontrolled components rely on the browser or environment, while controlled components \n are managed by the application code.  React PropTypes is a way to \n validate props in components. \n Node.js is a runtime environment for executing JavaScript code outside of a web browser, primarily \n used for building server-side applications. \n Custom hooks are a useful tool in React for reusing logic across components.", 20, 50);
+            
+            doc.save("blog-information.pdf")
+    }
+
+
     return (
         <main>
             <div className='container'>
@@ -32,7 +45,7 @@ const Blog = () => {
                     </div>
                 </div>
             </div>
-            <button className='bg-yellow-600 hover:bg-amber-500 w-[200px] mx-auto px-5 py-3 rounded flex gap-2 items-center mb-10 text-white font-semibold'> <span> <GoFilePdf /> </span> Download PDF <span> <ImFolderDownload /> </span> </button>
+            <button onClick={downloadPdf} className='bg-yellow-600 hover:bg-amber-500 w-[200px] mx-auto px-5 py-3 rounded flex gap-2 items-center mb-10 text-white font-semibold'> <span> <GoFilePdf /> </span> Download PDF <span> <ImFolderDownload /> </span> </button>
         </main >
     );
 };
