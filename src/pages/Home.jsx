@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from './Header/Banner';
 import Chefs from '../components/Chefs';
 import FoodCategory from '../components/FoodCategory';
+import TrustedCard from '../components/TrustedCard';
 
 const Home = () => {
     return (
@@ -9,6 +10,7 @@ const Home = () => {
             <Banner />
             <FoodCategory />
             <Chefs />
+            <TrustedCard />
         </main>
     );
 };
