@@ -6,5 +6,5 @@
     @apply max-w-[1240px] mx-auto 
 }
 .active{
-    @apply text-yellow-600
+    @apply text-yellow-600 underline
 }
