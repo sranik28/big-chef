@@ -11,11 +11,12 @@ const SingleChef = ({ chef }) => {
 
             <div className="container absolute right-0 left-0 top-10 flex gap-5  items-center">
                 <div className="border p-5 rounded grid grid-cols-1 md:grid-cols-4 gap-5 text-white">
-                    <div className="h-[350px] w-full mx-auto">
-                        <LazyLoad>
+                    <LazyLoad threshold={0.95} onContentVisible={() => {console.log('loaded!')}}>
+                        <div className="h-[350px] w-full mx-auto">
                             <img className="h-full object-cover w-full rounded" src={image} alt="" />
-                        </LazyLoad>
-                    </div>
+                        </div>
+                    </LazyLoad>
+
                     <div className="col-span-3">
                         <h3 className=" text-xl font-bold my-3">{name}</h3>
                         <p className="font-bold my-2"> <span className="font-bold text-xl"> Experience : </span>   {experience}</p>

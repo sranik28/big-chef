@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BiLike } from 'react-icons/bi';
+import LazyLoad from 'react-lazy-load';
 
 const ChefCard = ({ chef }) => {
     const { name, experience, number_of_recipes, likes, image, _id } = chef;
@@ -10,7 +11,9 @@ const ChefCard = ({ chef }) => {
     return (
         <main className="w-full mx-auto mt-20 grid md:grid-cols-2 mb-10 border rounded border-orange-300 p-6">
             <div>
-                <img className=" w-80 h-80 rounded-md" src={image} alt="Shoes" />
+                <LazyLoad threshold={0.95} onContentVisible={() => {console.log('loaded!')}}>
+                    <img className=" w-80 h-80 rounded-md" src={image} alt="Shoes" />
+                </LazyLoad>
             </div>
             <div className='p-5'>
                 <h1 className="text-4xl font-bold py-5">{name}</h1>

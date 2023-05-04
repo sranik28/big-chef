@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import {  toast } from 'react-toastify';
+import { toast } from 'react-toastify'; import { Rating } from '@smastrom/react-rating'
+import '@smastrom/react-rating/style.css'
 
 const RecipesCard = ({ singleData }) => {
 
@@ -18,7 +19,9 @@ const RecipesCard = ({ singleData }) => {
             <img className="w-full h-[450px] rounded object-cover" src={food_image} alt="" />
             <div className="text-center">
                 <h3 className=" text-xl font-bold my-3">{recipe_name}</h3>
-                <p className=" my-2"><span className="font-bold">ratings</span> : {ratings}</p>
+                <div className=' flex justify-center'>
+                    <Rating style={{ maxWidth: 120 }} value={ratings}  readOnly />
+                </div>
                 <button onClick={handelFavoriteBtn} disabled={isLiked} className={` w-[150px] py-3 rounded text-white my-2 ${isLiked ? "bg-amber-500 cursor-not-allowed" : "bg-yellow-600"}`}>{isLiked ? "Favorited" : "Favorite"}</button>
                 <div className="border p-4 rounded">
                     <span className="font-bold text-xl ">ingredient : </span>
@@ -52,7 +55,7 @@ const RecipesCard = ({ singleData }) => {
                 )}
 
             </div>
-           
+
         </article>
 
     );

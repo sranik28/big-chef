@@ -7,7 +7,7 @@ const ContextCreate = createContext();
 const auth = getAuth(app);
 
 const DataProvider = ({ children }) => {
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(true);
     const [user, setUser] = useState(null)
 
 
@@ -24,17 +24,15 @@ const DataProvider = ({ children }) => {
     const gitHubProvider = new GithubAuthProvider()
     const signInGitHub = () => {
         setLoading(true)
-        signInWithPopup(auth,gitHubProvider)
-        .then(()=>{})
-        .catch(()=>{})
+        return signInWithPopup(auth,gitHubProvider)
+        
     }
 
     const googleProvider = new GoogleAuthProvider();
     const signInGoogle = () => {
         setLoading(true)
-        signInWithPopup(auth, googleProvider)
-            .then(() => { })
-            .catch(() => { })
+       return signInWithPopup(auth, googleProvider);
+            
     }
 
     const logOut = () => {

@@ -7,7 +7,7 @@ import { useDataGlobally } from '../../context/Context';
 
 const NavBar = () => {
 
-    const {logOut ,user }=useDataGlobally();
+    const { logOut, user } = useDataGlobally();
 
     const [toggle, setToggle] = useState(false)
     return (
@@ -30,12 +30,12 @@ const NavBar = () => {
                         <NavLink to="/blog" className={({ isActive }) => isActive ? "active" : ""}>Blog</NavLink>
                     </li>
                     <li>{
-                            user?.photoURL ? <img className="w-[35px] h-[35px] rounded-full" src={user?.photoURL} title={user.displayName} alt="" /> : ""
-                        }
+                        user?.photoURL ? <img className="w-[35px] h-[35px] rounded-full" src={user?.photoURL} title={user.displayName} alt="" /> : ""
+                    }
                     </li>
                     <li>{
-                            user ? <button onClick={logOut} className="bg-yellow-500 hover:bg-amber-500  px-4 py-2  text-white">LogOut</button> : <button className="bg-yellow-500 hover:bg-amber-500 px-4 py-2 rounded-md text-white"><Link to="/login">Login</Link></button>
-                        }
+                        user ? <button onClick={logOut} className="bg-yellow-500 hover:bg-amber-500  px-4 py-2  text-white">LogOut</button> : <button className="bg-yellow-500 hover:bg-amber-500 px-4 py-2 rounded-md text-white"><Link to="/login">Login</Link></button>
+                    }
                     </li>
                 </ul>
             </div>

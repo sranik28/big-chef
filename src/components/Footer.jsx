@@ -33,7 +33,7 @@ const Footer = () => {
                             </div>
                             <div className="mt-12 md:mt-0">
                                 <h4 className="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase">
-                                    Recipes
+                                    Contact Us
                                 </h4>
                                 <ul className="mt-4">
                                     <li>
@@ -41,7 +41,7 @@ const Footer = () => {
                                             to="#"
                                             className="text-base leading-6 text-black hover:text-amber-500"
                                         >
-                                            Main Dishes
+                                            bigchef@gmail.com
                                         </Link>
                                     </li>
                                     <li className="mt-4">
@@ -49,17 +49,10 @@ const Footer = () => {
                                             to="#"
                                             className="text-base leading-6 text-black hover:text-amber-500"
                                         >
-                                            Desserts
+                                           +6622211705
                                         </Link>
                                     </li>
-                                    <li className="mt-4">
-                                        <Link
-                                            to="#"
-                                            className="text-base leading-6 text-black hover:text-amber-500"
-                                        >
-                                            Drinks
-                                        </Link>
-                                    </li>
+                                    
                                 </ul>
                             </div>
                         </div>

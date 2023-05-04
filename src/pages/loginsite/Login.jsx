@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import NavBar from '../Header/NavBar';
 import { useDataGlobally } from '../../context/Context';
 import { FcGoogle } from "react-icons/fc";
 import { BsGithub } from "react-icons/bs";
@@ -11,7 +10,7 @@ const Login = () => {
     const { signIn, signInGoogle, signInGitHub } = useDataGlobally();
     const navigate = useNavigate();
     const location = useLocation();
-    console.log(location)
+    console.log("login page", location)
     const from = location.state?.from?.pathname || "/"
 
     const [error, setError] = useState("");
@@ -25,13 +24,37 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user)
-                navigate(from, {replace:true})
+                navigate(from, { replace: true });
             })
             .catch(error => {
                 console.log(error)
                 setError(error.message)
             })
 
+    }
+
+    const handelGoogle = () => {
+        signInGoogle()
+            .then((result) => {
+                const google = result.user;
+                console.log(google)
+                navigate(from)
+            })
+            .catch((error) => {
+                console.log(error.message)
+            })
+    }
+
+    const handelGitHub = () => {
+        signInGitHub()
+        .then((result) => {
+            const gitHub = result.user;
+            console.log(gitHub)
+            navigate(from)
+        })
+        .catch((error) => {
+            console.log(error.message)
+        })
     }
 
 
@@ -53,8 +76,8 @@ const Login = () => {
                         <p className='my-5'> Create a new account?<Link to="/register" className='text-yellow-700 underline'> Registration</Link></p>
                     </form>
                 </div>
-                <button onClick={signInGoogle} className='p-[10px] border rounded w-full flex justify-center items-center gap-[6px] '><FcGoogle className='text-[32px]' /><span>Continue with Google</span></button>
-                <button onClick={signInGitHub} className='p-[10px] border rounded w-full flex justify-center items-center gap-[6px] '><BsGithub className='text-[32px]' /><span>Continue with GitHub</span></button>
+                <button onClick={handelGoogle} className='p-[10px] border rounded w-full flex justify-center items-center gap-[6px] '><FcGoogle className='text-[32px]' /><span>Continue with Google</span></button>
+                <button onClick={handelGitHub} className='p-[10px] border rounded w-full flex justify-center items-center gap-[6px] '><BsGithub className='text-[32px]' /><span>Continue with GitHub</span></button>
             </div>
         </main>
     );
