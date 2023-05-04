@@ -28,20 +28,15 @@ const Blog = () => {
                     </div>
                     <div className='p-3 border-2 rounded'>
                         <h1 className='text-3xl py-3'>How to validate React props using PropTypes?</h1>
-                        <p><strong>Custom hooks</strong> in React are a way to reuse stateful logic across
-                            multiple components in your application. They allow you to extract
-                            common logic into a reusable function, which can be used across
-                            different components. Custom hooks are functions that start with the
-                            prefix use. They can call other hooks, such as useState, useEffect,
-                            useRef, etc., and can also have their own state and logic.</p>
+                        <p><strong>PropTypes</strong> is a utility provided by React that allows you to define the expected types and shapes of props that a component should receive. By defining PropTypes for your component, you can catch errors and make your code more robust. To use PropTypes, you import it from the prop-types package, define the expected types and shapes of your props using propTypes, and specify any required props using isRequired.</p>
                     </div>
                     <div className='p-3 border-2 rounded'>
                         <h1 className='text-3xl py-3'>Tell us the difference between nodejs and express js?</h1>
-                        <p><strong>useRef</strong> is a React Hook.This is a React Hook that allows you to create a mutable variable that persists across re-renders of a component. It is commonly used to access the DOM elements or to store any mutable value that needs to be accessed between renders without triggering a re-render.</p>
+                        <p><strong>Node.js and Express.js</strong> are two different technologies used in web development. Here's a brief overview of the differences between the two:Node.js: Node.js is a runtime environment for executing JavaScript code outside of a web browser. It is built on top of the V8 JavaScript engine and provides an event-driven, non-blocking I/O model that makes it ideal for building scalable, networked applications. Node.js is mainly used for building server-side applications such as APIs, web servers, and real-time applications.used for building server-side applications such as APIs, web servers, and real-time applications.used for building server-side applications such as APIs, web servers, and real-time applications.nd real-time applications.used for building server-side applications custom hook can be useful</p>
                     </div>
                     <div className='p-3 border-2 rounded'>
                         <h1 className='text-3xl py-3'>What is a custom hook, and why will you create a custom hook?</h1>
-                        <p><strong>useMemo</strong> is a React Hook.This is a React Hook that allows you to memoize the result of a function and only recompute it when the dependencies change. It is used to optimize performance by avoiding unnecessary re-computations of expensive operations. </p>
+                        <p>A <strong>custom hook</strong> is a reusable function in React that uses one or more of the built-in hooks to provide custom functionality. You might create a custom hook to abstract away complex or repetitive logic, share stateful logic between components, or to make your code more modular and easier to maintain.</p>
                     </div>
                 </div>
             </div>
