@@ -7,7 +7,6 @@ import Loading from '../components/Loading';
 const PrivateRouter = ({ children }) => {
     const { loading, user } = useDataGlobally()
     const location = useLocation();
-    console.log(location)
     if (loading) {
         return <Loading />
     }

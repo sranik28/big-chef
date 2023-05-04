@@ -20,13 +20,9 @@ const Register = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
         const photo = e.target.photo.value;
-        // console.log(name, email, password, photo);
-        // -------------
+
         if (!/(?=.*?[A-Z])/.test(password)) {
             setError("At last one uppercase ")
-        }
-        else if (!/(?=.*?[#?!@$%^&*-])/.test(password)) {
-            setError("At last one Character ")
         }
         else if (password.length < 6) {
             setError("please add at least 6 number");
@@ -37,13 +33,13 @@ const Register = () => {
         createUser(email, password)
             .then(result => {
                 const currentUser = result.user;
-                console.log(currentUser)
+
                 updateProfile(currentUser,{displayName:name,photoURL:photo})
                 e.target.reset();
                 setSuccess("User has created successfully");
             })
             .catch(error => {
-                console.log(error);
+
                 setError(error.message)
             })
 

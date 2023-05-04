@@ -29,6 +29,22 @@ const Footer = () => {
                                             Blog
                                         </Link>
                                     </li>
+                                    <li className="mt-4">
+                                        <Link
+                                            to="/login"
+                                            className="text-base leading-6 text-black hover:text-amber-500"
+                                        >
+                                            Login
+                                        </Link>
+                                    </li>
+                                    <li className="mt-4">
+                                        <Link
+                                            to="/register"
+                                            className="text-base leading-6 text-black hover:text-amber-500"
+                                        >
+                                           Register
+                                        </Link>
+                                    </li>
                                 </ul>
                             </div>
                             <div className="mt-12 md:mt-0">
@@ -42,6 +58,14 @@ const Footer = () => {
                                             className="text-base leading-6 text-black hover:text-amber-500"
                                         >
                                             bigchef@gmail.com
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link
+                                            to="#"
+                                            className="text-base leading-6 text-black hover:text-amber-500"
+                                        >
+                                            Location: Prathet Thai, Thailand
                                         </Link>
                                     </li>
                                     <li className="mt-4">
