@@ -9,8 +9,8 @@ const TrustedCard = () => {
     return (
         <div className='container'>
             <section className=" mt-[140px] mb-24">
-                <h2 className="text-3xl font-bold text-center mb-10 underline">Trusted <span className="text-yellow-500">By</span></h2>
-                <div className="flex items-center gap-5 ui-container flex-wrap">
+                <h2 className="mb-10 text-3xl font-bold text-center ">Trusted <span className="text-yellow-500">By</span></h2>
+                <div className="flex flex-wrap items-center gap-5 ui-container">
                     <img className="w-[200px] mt-6 md:mt-auto mx-auto" src={img1} alt="" />
                     <img className="w-[200px] mt-6 md:mt-auto mx-auto" src={img2} alt="" />
                     <img className="w-[200px] mt-6 md:mt-auto mx-auto" src={img3} alt="" />
