@@ -4,6 +4,7 @@ import Chefs from '../components/Chefs';
 import FoodCategory from '../components/FoodCategory';
 import TrustedCard from '../components/TrustedCard';
 import Subscribe from '../components/Subscribe';
+import Contact from '../components/Contact';
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
             <FoodCategory />
             <Chefs />
             <Subscribe />
+            <Contact />
             <TrustedCard />
         </main>
     );
