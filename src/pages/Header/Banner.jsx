@@ -3,7 +3,7 @@ import banner from '../../assets/banner.jpg';
 import { BsBoxArrowUpRight } from 'react-icons/bs';
 const Banner = () => {
     return (
-        <main className='w-full h-[89vh] relative overflow-x-hidden' >
+        <main className='w-full h-[89vh] relative overflow-x-hidden'>
             <div className='before:contents-[""] relative before:bg-[#000000bb] before:absolute w-full h-[89vh] before:top-0 before:left-0 before:right-0 before:bottom-0 '>
                 <img className='w-full h-full object-cover ' src={banner} alt="" />
             </div>

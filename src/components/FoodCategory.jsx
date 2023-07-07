@@ -13,7 +13,7 @@ const FoodCategory = () => {
             <h1 className=' text-center text-4xl font-bold mt-16 '>Our Delicious Food</h1>
             <p className='text-gray-600 text-center mt-2'>All of our products are made from scratch using family recipes with only the highest quality ingredients.<br /> We bake and sell fresh daily to ensure only the best products are sold to our customers.</p>
             <div className='grid md:grid-cols-3 gap-8 my-10 p-6 rounded '>
-                <div className='border p-6 block mx-auto shadow-md'>
+                <div className='border  p-6 block mx-auto shadow-md'>
                     <img className='w-72 h-72 rounded' src={FoodCategory1} alt="" srcset="" />
                     <h1 className='p-2 text-xl text-center'>coconut milk</h1>
                     <p className="text-center ">Price:<span className='font-bold'>$15</span> </p>

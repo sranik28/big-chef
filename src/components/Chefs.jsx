@@ -19,9 +19,9 @@ const Chefs = () => {
 
     return (
         <div className='container'>
-            <h1 className='text-center text-4xl font-bold'>Our <span className='text-yellow-500'>Chefs</span></h1>
-            <p className='text-gray-600 text-center mt-2'>The main chefs in our restaurant and supervisors of the chefs' crew</p>
-            <div className='grid md:grid-cols-2 gap-6 container'>
+            <h1 className='text-4xl font-bold text-center'>Our <span className='text-yellow-500'>Chefs</span></h1>
+            <p className='mt-2 text-center text-gray-600'>The main chefs in our restaurant and supervisors of the chefs' crew</p>
+            <div className='container grid gap-6 md:grid-cols-2'>
                 {
                     slider.map(chef => <ChefCard key={chef._id} chef={chef} />)
                 }

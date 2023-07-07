@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { toast } from 'react-toastify'; import { Rating } from '@smastrom/react-rating'
+import { toast } from 'react-toastify'; 
+import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
 
 const RecipesCard = ({ singleData }) => {

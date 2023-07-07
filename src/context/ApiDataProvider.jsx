@@ -13,7 +13,7 @@ const ApiDataProvider = ({children}) => {
         getChefs()
     },[])
 
-    const allData = {
+    const allData = {   
         chefs
 
     }
