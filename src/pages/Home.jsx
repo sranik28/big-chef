@@ -8,7 +8,7 @@ import Contact from '../components/Contact';
 
 const Home = () => {
     return (
-        <main>
+        <main className='overflow-hidden'>
             <Banner />
             <FoodCategory />
             <Chefs />

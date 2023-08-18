@@ -3,7 +3,7 @@ import contact from '../assets/contact/contact.png'
 
 const Contact = () => {
     return (
-        <main className='container px-3'>
+        <main className='container px-3 '>
             <h1 className='my-10 text-4xl font-bold text-center'>Contact <span className='text-yellow-500'>Us</span></h1>
             <div className='grid gap-5 my-20 md:grid-cols-2'>
                 <div data-aos="fade-right" data-aos-duration="2000">
